@@ -10,7 +10,7 @@ log out/in or type:
 `newgrp docker` <br>
 Run `docker ps` :smile:
 
-**Nếu bạn nào clone về mà không thấy code đâu thì làm theo các bước dưới đây nhé:** <br>
+## Nếu bạn nào clone về mà không thấy code đâu thì làm theo các bước dưới đây nhé: <br>
 Mở terminal lên và trỏ đến thư mục của project (Cái này tất nhiên rồi hehe).<br>
 Sau đó gõ lệnh này:smile:<br>
 `git checkout origin/develop` <br>
