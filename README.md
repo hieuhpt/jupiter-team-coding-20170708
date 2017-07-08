@@ -8,7 +8,7 @@ Add the docker group if it doesn't already exist:
 Add the connected user "$USER" to the docker group:
 `sudo gpasswd -a $USER docker`
 
-log out/in type:
+log out/in or type:
 `newgrp docker`
 
 Run `docker ps` :smile:
