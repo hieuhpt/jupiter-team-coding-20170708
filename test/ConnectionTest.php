@@ -13,11 +13,11 @@ use Src\Connection;
 
 class ConnectionTest extends TestCase
 {
-    private $serverName = "192.168.1.97";
+    private $serverName = "mysql";
     private $wrongServerName = "192.168.1.197";
-    private $database = "default";
-    private $userName = "root";
-    private $password = "root";
+    private $database = "jupiter";
+    private $userName = "jupiter";
+    private $password = "jupiter";
 
     public function testCanBeCreated()
     {
