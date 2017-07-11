@@ -1,19 +1,40 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: hieuhpt
- * Date: 08/07/2017
- * Time: 16:26
+ * User: thang
+ * Date: 11/07/2017
+ * Time: 11:02
  */
 
 namespace Src\Model;
 
 use Src\Entity\Staff as StaffEntity;
-
+include 'src/model/Connection.php';
 class Staff
 {
-    public function create()
+    private $conn;
+
+    /**
+     * Staff constructor.
+     * @param $conn
+     */
+    public function __construct()
     {
-        return new StaffEntity();
+          $this->conn = (new Connection())
+              ->get('192.168.1.34', 'default', 'default', 'secret');
+    }
+
+
+    public function create(StaffEntity $staff)
+    {
+        $name = $staff->getName();
+        $address = $staff->getAddress();
+        $email = $staff->getEmail();
+
+        $sql = "INSERT INTO staff (name, adress, email) VALUES ('$name', '$address', '$email')";
+        $this->conn->exec($sql);
+        $staff->setId(intval($this->conn->lastInsertId()));
+
+        return $staff;
     }
 }
