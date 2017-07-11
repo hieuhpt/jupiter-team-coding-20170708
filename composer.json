@@ -11,9 +11,13 @@
     "phpunit/phpunit": "^6.2"
   },
   "autoload": {
-    "psr-4": {
-      "Src\\Entity\\": "src/entity",
-      "Src\\Model\\": "src/model"
+    "ps4-r": {
+      "Src\\": "src/",
+      "Src\\Entity\\": "src/entity/",
+      "Src\\Entity\\Staff": "src/entity/Staff.php",
+      "Src\\Model\\": "src/model/",
+      "Test\\": "test/",
+      "Test\\Model": "test/model/"
     }
   }
 }
